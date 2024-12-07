@@ -11,4 +11,6 @@ Document *readDocument(char *collection, char *id, Database *database,
 bool setDocument(Document *document, Database *database, char *path);
 bool updateDocument(Document *document, Database *database, char *path);
 
-QueryResult query(char collection[12], QueryFilter *filters);
+QueryResult query(char collection[12], QueryFilter *filters, int limit);
+QueryResult getDocs(char collection[12]);
+QueryResult getDoc(char collection[12], char id[20]);
